@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.21.2.final using JasperReports Library version 6.21.2-8434a0bd7c3bbc37cbf916f2968d35e4b165821a  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report-gastos" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="080e3274-29ce-4684-9e36-4c7042fe1657">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<parameter name="voucher_id" class="java.lang.String"/>
+	<parameter name="date_report" class="java.lang.String"/>
+	<parameter name="value_pay" class="java.math.BigDecimal"/>
+	<parameter name="payment_method" class="java.lang.String"/>
+	<parameter name="payer" class="java.lang.String"/>
+	<parameter name="debtor" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="98" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="10" width="550" height="40" uuid="5955e640-6827-42b5-9768-ae47b3d017c1"/>
+				<textElement textAlignment="Center">
+					<font fontName="Verdana" size="26" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Comprobante de Pago!]]></text>
+			</staticText>
+			<image>
+				<reportElement x="252" y="48" width="50" height="50" uuid="af7ece47-b375-44a3-8eb8-6d5ffa6ba40b"/>
+				<imageExpression><![CDATA["comprobado.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="122" splitType="Stretch">
+			<staticText>
+				<reportElement x="90" y="21" width="445" height="80" uuid="c45e9a3f-c433-4d1f-bd4d-d8a35bf9effd"/>
+				<textElement textAlignment="Justified" verticalAlignment="Middle">
+					<font fontName="Verdana" size="13"/>
+				</textElement>
+				<text><![CDATA[
+Para cualquier reclamo sobre los gastos del servicio, por favor, presente el comprobante de pago correspondiente. Esto es necesario para garantizar una gestión eficaz y resolver cualquier problema de manera adecuada. ]]></text>
+			</staticText>
+			<image>
+				<reportElement x="30" y="40" width="50" height="50" uuid="b94c55d9-64af-4310-b323-7239db62e722"/>
+				<imageExpression><![CDATA["idea.png"]]></imageExpression>
+			</image>
+			<rectangle>
+				<reportElement mode="Transparent" x="10" y="21" width="550" height="90" forecolor="#E8DDDC" uuid="89276a24-be42-4981-9e8a-b6b8147f91cb"/>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="85" splitType="Stretch">
+			<staticText>
+				<reportElement x="140" y="10" width="148" height="30" uuid="6ad51397-983a-439e-91cf-4abd012b0e59"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Comprobante No.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="316" y="10" width="120" height="30" uuid="8324c0f4-de69-4e0b-8754-e07ee4a81fdb"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{voucher_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="67" y="40" width="420" height="20" uuid="0f831b25-756b-463f-950c-36f31be02330"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{date_report}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="10" y="0" width="550" height="80" forecolor="#E8DDDC" uuid="b4543dbd-ff23-4a63-81bc-bb43a9f3ac2b"/>
+			</rectangle>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="151" splitType="Stretch">
+			<staticText>
+				<reportElement x="200" y="20" width="100" height="26" uuid="4b4b6a47-5fe9-41db-9950-1f37576c9734"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Valor de pago:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="57" width="100" height="26" uuid="3d4ac2c6-288e-48e7-b6ba-d90672b04a38"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Medio de pago:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="90" width="100" height="26" uuid="fb189b5e-75df-4334-8f49-2a2b000863aa"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Pagador:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="200" y="125" width="100" height="26" uuid="e6d6653e-ee8d-4670-be76-0c3e9aa71832"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<text><![CDATA[Deudor:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="310" y="57" width="130" height="26" uuid="de3a75af-c8fe-4fee-aa7a-560762706626"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{payment_method}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="90" width="100" height="26" uuid="5e12d893-63bc-4be3-be2e-ecb1283220c4"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{payer}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="20" width="100" height="26" uuid="af8151e2-2db6-4f68-b397-2baef0c5c19a"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["$" + $P{value_pay}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="310" y="125" width="100" height="26" uuid="d7fc2c7d-5de5-4497-b7ab-2fa7d40aa88f"/>
+				<textElement>
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{debtor}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="68" splitType="Stretch"/>
+	</summary>
+</jasperReport>
